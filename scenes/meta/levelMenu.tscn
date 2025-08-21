@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://kw2ocj860c2f"]
+[gd_scene load_steps=4 format=3 uid="uid://kw2ocj860c2f"]
 
-[ext_resource type="Texture2D" uid="uid://ci7ufn17bfvie" path="res://icon.svg" id="1_kobve"]
-[ext_resource type="Script" uid="uid://cd3a5wo4wbs0f" path="res://scripts/levelMenu.gd" id="1_sw1i0"]
+[ext_resource type="Texture2D" uid="uid://ci7ufn17bfvie" path="res://assets/icon.svg" id="1_kobve"]
+[ext_resource type="Script" uid="uid://cd3a5wo4wbs0f" path="res://scripts/MenuScripts/levelMenu.gd" id="1_sw1i0"]
+
+[sub_resource type="Theme" id="Theme_sw1i0"]
 
 [node name="LevelMenu" type="Control"]
 layout_mode = 3
@@ -18,14 +20,17 @@ offset_right = 1152.0
 offset_bottom = 648.0
 alignment = 1
 
-[node name="Tutorial" type="Button" parent="VBoxContainer"]
+[node name="tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Tutorial"
+size_flags_vertical = 4
+theme = SubResource("Theme_sw1i0")
+text = "Start"
 icon = ExtResource("1_kobve")
 icon_alignment = 1
 
 [node name="BackButton" type="Button" parent="."]
+layout_mode = 0
 offset_top = 580.0
 offset_right = 136.0
 offset_bottom = 716.0
