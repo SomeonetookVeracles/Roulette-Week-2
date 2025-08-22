@@ -1,0 +1,288 @@
+[gd_scene load_steps=7 format=3 uid="uid://b36we82pjak6f"]
+
+[ext_resource type="Script" uid="uid://crn5b735p8a4y" path="res://Scenes/Game/game.gd" id="1_huoen"]
+[ext_resource type="Texture2D" uid="uid://cvi6dr87t7m3e" path="res://Assets/Tiles/black.png" id="2_8e3kh"]
+[ext_resource type="Texture2D" uid="uid://do6vhcjxnbkya" path="res://Assets/Background/wood-2045379_640.jpg" id="2_upfqs"]
+[ext_resource type="Texture2D" uid="uid://bvb27u3x7yfxj" path="res://Assets/Tiles/empty_tile.png" id="14_8e3kh"]
+[ext_resource type="Texture2D" uid="uid://ctujbmslw44dh" path="res://Assets/Buttons/icon_repeat_outline.png" id="15_2vowc"]
+[ext_resource type="Texture2D" uid="uid://b8wf57wityem8" path="res://Assets/Sprites/stopwatch-2-64.png" id="16_56qi8"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_huoen")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackOverlay" type="TextureRect" parent="Control"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 368.0
+offset_bottom = 48.0
+texture = ExtResource("2_8e3kh")
+metadata/_edit_lock_ = true
+
+[node name="Grid-blue-background23979-88" type="Sprite2D" parent="Control"]
+z_index = -1
+position = Vector2(168, 336)
+scale = Vector2(0.9125, 1.57377)
+texture = ExtResource("2_upfqs")
+metadata/_edit_lock_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 128.0
+offset_right = 641.0
+offset_bottom = 745.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="TextureButton1" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "1"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "2"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "3"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton4"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "4"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton5" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton5"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "5"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton6" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton6"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "6"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton7" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton7"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "7"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton8" type="TextureButton" parent="Control/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("14_8e3kh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/GridContainer/TextureButton8"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 184.0
+theme_override_colors/default_color = Color(0.263917, 0.0892183, 0.0300843, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52549)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_font_sizes/normal_font_size = 120
+text = "8"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shuffle" type="TextureButton" parent="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_left = 136.0
+offset_top = 512.0
+offset_right = 335.0
+offset_bottom = 711.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("14_8e3kh")
+stretch_mode = 1
+
+[node name="IconRepeatOutline" type="Sprite2D" parent="Control/Shuffle"]
+modulate = Color(0.262745, 0.0901961, 0.0313726, 1)
+position = Vector2(106, 96)
+scale = Vector2(2.77778, 3)
+texture = ExtResource("15_2vowc")
+
+[node name="Shadow" type="Sprite2D" parent="Control/Shuffle"]
+modulate = Color(0.201527, 0.201527, 0.201527, 0.407843)
+z_index = -1
+position = Vector2(104, 104)
+texture = ExtResource("14_8e3kh")
+metadata/_edit_lock_ = true
+
+[node name="MovesLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 161.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = "Moves: 399"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 264.0
+offset_right = 352.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = " 00:00"
+vertical_alignment = 1
+
+[node name="Stopwatch-2-64" type="Sprite2D" parent="Control/TimeLabel"]
+position = Vector2(-32, 24)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("16_56qi8")
+
+[connection signal="pressed" from="Control/GridContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="Control/GridContainer/TextureButton8" to="." method="_on_texture_button_8_pressed"]
